@@ -240,6 +240,6 @@ public class RestApplication extends Application {
 
 Restart your server and access to http://localhost:8080/api/, you should access to a swagger ui instance that provides documentation on your api. 
 
-You can follow this guide to show how you can specialise the documentation through annotation
+You can follow this guide to show how you can specialise the documentation through annotations.
 
 https://github.com/swagger-api/swagger-samples/blob/2.0/java/java-resteasy-appclasses/src/main/java/io/swagger/sample/resource/PetResource.java
