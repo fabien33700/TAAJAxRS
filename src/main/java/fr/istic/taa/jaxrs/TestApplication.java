@@ -28,7 +28,7 @@ public class TestApplication extends Application {
 
         final Set<Class<?>> clazzes = new HashSet<Class<?>>();
 
-        clazzes.add(StatusEndpoint.class);
+        clazzes.add(APIEndpoint.class);
 
         return clazzes;
     }
