@@ -8,12 +8,14 @@ import java.util.Set;
 
 @Getter
 @Setter
+
 public class PeopleTO extends BaseResourceTO {
     private String name;
     private int height;
     private int mass;
     private String hairColor;
     private String eyeColor;
+    private String skinColor;
     private String birthYear;
     private String gender;
     private String homeworld;

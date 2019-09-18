@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import java.util.Set;
 
 @Entity
@@ -14,12 +16,15 @@ public class Specie extends BaseResource {
     private String classification;
     private String designation;
     private int averageHeight;
-    private Set<String> skinColors;
-    private Set<String> hairColors;
-    private Set<String> eyeColors;
+    private String skinColors;
+    private String hairColors;
+    private String eyeColors;
     private int averageLifespan;
+    @ManyToOne
     private Planet homeworld;
     private String language;
+    @ManyToMany
     private Set<People> people;
+    @ManyToMany
     private Set<Film> films;
 }

@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import java.util.Set;
 
 @Entity
@@ -14,11 +16,16 @@ public class Planet extends BaseResource {
     private long rotationPeriod;
     private long orbitalPeriod;
     private long diameter;
-    private Set<String> climate;
-    private Set<String> terrain;
+    private String climate;
+    private String terrain;
     private float surfaceWater;
     private long population;
+
+
+    @OneToMany(mappedBy = "homeworld")
     private Set<People> residents;
+
+    @ManyToMany
     private Set<Film> films;
 }
 

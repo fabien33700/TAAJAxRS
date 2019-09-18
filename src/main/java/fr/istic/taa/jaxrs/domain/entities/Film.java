@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -17,10 +18,20 @@ public class Film extends BaseResource {
     private String director;
     private String producer;
     private LocalDateTime releaseDate;
+
+    @ManyToMany
     private Set<People> characters;
+
+    @ManyToMany
     private Set<Planet> planets;
+
+    @ManyToMany
     private Set<Starship> starships;
+
+    @ManyToMany
     private Set<Vehicle> vehicles;
+
+    @ManyToMany
     private Set<Specie> species;
 
 }
